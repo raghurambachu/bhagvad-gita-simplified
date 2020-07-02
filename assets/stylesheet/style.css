@@ -64,12 +64,28 @@ body {
   overflow-x: hidden;
 }
 
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 1rem 0;
+  font-weight: 700;
+}
+
 .flex {
   display: flex;
 }
 
+.modal-move-left {
+  transform: translateX(-30%);
+}
+
 .modal {
   transition: transform 0.4s;
+}
+@media all and (max-width: 1180px) {
+  .modal {
+    transform: none;
+  }
 }
 .modal .form-modal {
   position: relative;
@@ -191,9 +207,24 @@ body {
 .modal .-box-sd-effect:hover {
   box-shadow: 0 4px 8px rgba(213, 214, 215, 0.2);
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 545px) {
   .modal .form-modal {
-    width: 100%;
+    width: 90%;
+    font-size: 0.9rem;
+  }
+}
+@media all and (max-width: 545px) {
+  .modal .label-custom-select {
+    font-size: 0.9rem;
+  }
+  .modal .verse-form .btn-submit {
+    font-size: 0.9rem;
+  }
+  .modal .form-toggle button {
+    font-size: 0.9rem;
+  }
+  .modal .custom-select .custom-select__trigger {
+    font-size: 0.85rem;
   }
 }
 
@@ -348,11 +379,64 @@ body {
   margin: 0.45rem 0;
   font-weight: 600;
 }
+.chapter-content .verse-title, .chapter-content .verse, .chapter-content .verse-meaning, .chapter-content .verse-transliteration {
+  text-align: center;
+}
+.chapter-content strong {
+  font-weight: 700;
+}
+.chapter-content .verse-word-meaning {
+  margin: 0.8rem 0;
+}
+.chapter-content .verse {
+  padding: 0 4.5rem;
+}
 
 .chapter-content-display {
   opacity: 1;
   left: 70%;
   transition: all 0.4s;
+}
+@media all and (max-width: 1180px) {
+  .chapter-content-display {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60vh;
+    margin-top: 0rem;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1179px) {
+  .chapter-content-display {
+    margin-top: -15rem;
+    height: 45vh;
+  }
+}
+@media all and (max-width: 768px) {
+  .chapter-content-display {
+    margin-top: 4.5rem;
+    width: 90%;
+    height: 65vh;
+  }
+}
+@media all and (max-width: 545px) {
+  .chapter-content-display {
+    margin-top: 12rem;
+  }
+  .chapter-content-display .verse {
+    padding: 0;
+  }
+  .chapter-content-display h2 {
+    font-size: 0.9rem;
+  }
+  .chapter-content-display h3 {
+    font-size: 0.8rem;
+  }
+  .chapter-content-display h4 {
+    font-size: 0.7rem;
+  }
+  .chapter-content-display p {
+    font-size: 0.65rem;
+  }
 }
 
 .loading {
